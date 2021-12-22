@@ -1,0 +1,19 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block title %}Home{% endblock title %}
+{% block content %}
+  <div class="home">
+    <div class="home__headings">
+      <h1 class= "home__heading">Hello, I'm <span class="home__heading__name">Carlos</span>.</h1>
+      <h2 class= "home__subheading">I am a full-stack web developer.</h1>
+    </div>
+    <div class="home__cta">
+      <a href="{% url 'home:projects' %}">
+      <button class="home__btn" id="btn">View my projects</button>
+      </a>
+    </div>
+    
+  </div>
+  <script src="{% static 'scripts/homeScript.js' %}"></script>
+{% endblock content %}

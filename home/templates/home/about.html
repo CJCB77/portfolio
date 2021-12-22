@@ -1,0 +1,41 @@
+{% extends 'home/base.html' %}
+{% load static %}
+{% block title %}About me{% endblock title %}
+{% block content %}
+
+<section class="about">
+  <div class="about__headers">
+    <h1 class="profile__heading">About</h1>
+    <hr class="profile__heading-decoration">
+  </div>
+  <div class="about__profile">
+    <img class="profile__img" src="{% static 'imgs/profile.png' %}" alt="">
+    <h2 class="profile__subheading">Who am I?</h2>
+    <p class="profile__presentation">
+    I am a full-stack web developer, I work with static or dynamic websites
+    and I seriously love to build web applications. I always focus on giving an intuitive,dynamic
+    and responsive experience to the user. <br>
+    <a class="link" href="{% url 'home:contact' %}">Lets build something special together!</a>
+    </p>
+  </div>
+  <div class="skills">
+  <h3 class="skills__header">Skills</h3>
+  <ul class="skills__list">
+    <li class="skills-item"><img class="skills-icons"src="{% static 'imgs/css.svg' %}" alt="">CSS</li>
+    <li class="skills-item"><img class="skills-icons"src="{% static 'imgs/html.svg' %}" alt="">HTML</li>
+    <li class="skills-item"><img class="skills-icons"src="{% static 'imgs/responsive.svg' %}" alt="">Responsive Design</li>
+    <li class="skills-item"><img class="skills-icons"src="{% static 'imgs/javascript.svg' %}" alt="">Javascript</li>
+    <li class="skills-item"><img class="skills-icons"src="{% static 'imgs/piton.svg' %}" alt="">Python</li>
+    <li class="skills-item"><img class="skills-icons"src="{% static 'imgs/django.svg' %}" alt="">Django</li>
+    <li class="skills-item"><img class="skills-icons"src="{% static 'imgs/git.svg' %}" alt="">Git</li>
+
+  </ul>
+  </div>
+
+</section>
+
+{% endblock content %}
+
+
+  
+

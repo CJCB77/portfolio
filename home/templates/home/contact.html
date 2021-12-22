@@ -1,0 +1,25 @@
+{% extends 'home/base.html' %}
+{% load static %}
+{% block title %}Contact Me{% endblock title %}
+{% block content %}
+
+<div class="contact">
+  <h1 class = "contact__heading">CONTACT</h1>
+  <hr class="contact__heading-decoration">
+  <h2 class="contact__subheading">Want to work together or have a question?</h2>
+  <div id="error" class="error_messages"></div>
+  <div class="contact__form">
+    <form method="post" action="{% url 'home:contact' %}" id="form">
+    {% comment %} By the way this token counts as an input {% endcomment %}
+    {% csrf_token %}
+
+      <input class="contact__input" type="text" name="name" id="name" placeholder="Full Name" required>
+      <input class="contact__input" type="email" name="email" id="email" placeholder="Enter email" required>
+      <input class="contact__input" type="text" name="message" id="message" placeholder="Your message" required>
+      <button class="btn btn--teal"  type="submit">Submit</button>
+    </form>
+  </div>
+</div>
+
+<script src="{% static 'scripts/formValidator.js' %}"></script>
+{% endblock content %}
